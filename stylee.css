@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.815);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Fixed height to viewport */
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.815);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    color: white;
+}
+
+.logo-container {
+    background-color: rgb(97, 94, 94);
+    padding: 0.25rem;
+    border-radius: 0.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Main content */
+.content-wrapper {
+    flex: 1;
+    padding: 1rem;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    background-color: rgb(110, 108, 108);
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    flex: 1; /* Take available space */
+    max-height: calc(100vh - 140px); /* Adjust based on header/footer height */
+}
+
+.image-container {
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+
+.main-image {
+    border-radius: 1.5rem;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.register-form {
+    flex: 1.5;
+    background-color: rgb(199, 193, 193);
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 100%;
+    overflow-y: auto; /* Allow form to scroll if needed */
+}
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    color: #000000;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 0.25rem;
+}
+
+.form-input {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid #646363;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: #888;
+    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.5);
+}
+
+.password-container {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.submit-button {
+    width: 4rem;
+    margin: auto;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color: #4a4a4a;
+    font-size: 0.75rem;
+    border-radius: 0.125rem;
+    padding: 0.25rem;
+    border: 1px solid #858585;
+    transition: background-color 0.2s;
+}
+
+.sign-in-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.sign-in-text {
+    font-size: 0.80rem;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.sign-in-button {
+    background-color: rgb(173, 173, 173);
+    color: #4a4a4a;
+    font-size: 0.80rem;
+    text-align: center;
+    border-radius: 0.125rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #979797;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.sign-in-button:hover {
+    background-color: #f0f0f0;
+}
+
+.submit-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Footer Styles */
+.footer {
+    background: #000000;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo-img {
+    height: 5rem;
+    width: auto;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.contact-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-right p {
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #999999;
+}

@@ -1,0 +1,714 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #4d4c4c;
+    color: #000000;
+    line-height: 1.0;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 1%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 35px;
+    color: #e6e6e6;
+    font-weight: 700;
+    text-decoration: none;
+}
+.header-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-logo-img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Home Section Styles */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: #c5c3c3;
+    padding: 0 10%;
+    margin-top: 60px;
+}
+
+.home-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.home-image {
+    max-width: 40%;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.action-button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    background-color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #ac660b;
+}
+
+/* Lost Section Styles */
+.Lost {
+    background-color: #8f8b8b;
+    padding: 100px 10% 50px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    min-height: 100vh;
+}
+
+.lost-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    padding-top: 60px;
+}
+
+.search-bar {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+.search-input {
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+    width: 70%;
+}
+
+.report-button {
+    padding: 15px 25px;
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.lost-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.lost-item {
+    background-color: #ffffff;
+    color: #0e0c0c;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.lost-item-image {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.lost-item-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.lost-item-info {
+    text-align: left;
+}
+
+.lost-item-info h3 {
+    margin-bottom: 10px;
+}
+
+.lost-item-info p {
+    margin-bottom: 8px;
+}
+
+.contact-button {
+    padding: 8px 15px;
+    background-color: #0f2cce;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+
+/* Navigation Arrows for Lost Items */
+.lost-item-image {
+    position: relative;
+}
+
+.lost-item-nav-arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.lost-item-nav-arrows .nav-arrow {
+   width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 5;
+    pointer-events: auto;
+    margin: 3 10px;
+}
+
+/* Report Lost Section Styles */
+.report-lost, .report-Found {
+    padding: 120px 20px 60px;
+    background-color: #8f8b8b;
+    min-height: 100vh;
+}
+
+.report-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: rgb(218, 215, 215);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.report-form input, 
+.report-form textarea {
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.submit-button, .cancel-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Found Section Styles */
+.Found {
+    background-color: #777070;
+    padding: 100px 10% 50px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    min-height: 100vh;
+}
+
+.Found h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    padding-top: 60px;
+}
+
+.Found .report-button {
+    background-color: rgb(14, 238, 14);
+}
+
+.Found-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.Found-item {
+    background-color: #ffffff;
+    color: #0e0c0c;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.Found-item-image {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.Found-item-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.Found-item-info {
+    text-align: left;
+}
+
+.Found-item-info h3 {
+    margin-bottom: 10px;
+}
+
+.Found-item-info p {
+    margin-bottom: 8px;
+}
+
+/* Navigation Arrows for Found Items */
+.Found-item-image {
+    position: relative;
+}
+
+.found-item-nav-arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.found-item-nav-arrows .nav-arrow {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 5;
+    pointer-events: auto;
+    margin: 3 10px;
+}
+
+/* Updated Profile Section Styles */
+.Profile {
+    background-color: #4d4c4c;
+    padding: 130px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-container {
+    background-color: #aaa9a9;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 60%;
+    object-fit: cover;
+    background-color: #000000;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.edit-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #333333;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 15px;
+}
+
+.item-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #eee;
+}
+
+.item-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #4267B2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 10px;
+}
+
+.item-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-header-title {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.item-header-date {
+    font-size: 10px;
+    color: #777;
+}
+
+.item-img-container {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+}
+
+.item-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.item-details {
+    padding: 10px;
+    position: relative;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.item-location, .item-description {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.remove-btn {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+}
+
+.remove-btn:hover {
+    background-color: #e62e23;
+}
+
+
+/* Footer Styles */
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo-img {
+    height: 5rem;
+    width: 5rem;
+}
+
+
+.footer-right {
+    text-align: right;
+}
+
+.contact-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-right p {
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #000000;
+}
+
